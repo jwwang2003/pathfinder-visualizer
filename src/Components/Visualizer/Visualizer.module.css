@@ -1,0 +1,40 @@
+.grid_row {
+    height: var(--node-size);
+    box-sizing: border-box;
+}
+
+.visualizer {
+    position: relative;
+    box-sizing: border-box;
+    display: inline-block;
+    width: auto;
+    padding: 5px;
+    background: rgb(255,255,255);
+}
+
+.legend {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 5px;
+}
+
+.legend_item {
+    user-select: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 2px;
+}
+
+.legend_item:last-child {
+    margin-right: 0;
+}
+
+.legend_item > p {
+    margin-left: 5px;
+    margin-bottom: 0;
+}

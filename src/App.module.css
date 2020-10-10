@@ -1,0 +1,82 @@
+.App {
+  height: 100%;
+  background: rgb(25,25,25);
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 63px auto;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  overflow: auto;
+}
+
+.container_visualizer{
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+  background-color: rgb(255,255,255);
+  z-index: 1;
+  transition: 0.15s ease;
+}
+
+.container_visualizer::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(25px);
+  transform: scale(1.00);
+  background: linear-gradient(135deg, #24ff72, #2196f3);
+  z-index: -1;
+}
+
+.navbar {
+  height: auto;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 5px;
+}
+
+.navbar > .navbar_main {
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  background-color: rgb(230,230,230);
+  padding: 5px;
+}
+
+.navbar > .navbar_main > h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar_items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navbar_items > a {
+  padding-right: 10px;
+  transition: 0.15s ease;
+}
+
+.navbar_items > a:hover {
+  background-color: rgb(240,240,240);
+}
+
+.narbar_items > a:last-child {
+  padding-right: 0;
+}
+
+.navbar_items > a > h5 {
+  margin: 0;
+}
