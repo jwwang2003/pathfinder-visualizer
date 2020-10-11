@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ccab77f51ab6f4e72551c94fd1680eaf",
+    "revision": "1285f922b63b6a464327c8102b375db1",
     "url": "/pathfinder-visualizer/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/pathfinder-visualizer/static/css/2.6d04c983.chunk.css"
   },
   {
-    "revision": "e45d841087a78902ddeb",
+    "revision": "f20d68445609e9ebdf8c",
     "url": "/pathfinder-visualizer/static/css/main.7818de28.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/pathfinder-visualizer/static/js/2.a0bfc950.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e45d841087a78902ddeb",
-    "url": "/pathfinder-visualizer/static/js/main.dc6b5fcd.chunk.js"
+    "revision": "f20d68445609e9ebdf8c",
+    "url": "/pathfinder-visualizer/static/js/main.8d74fa74.chunk.js"
   },
   {
     "revision": "f6177f6d69b4c83c3909",
