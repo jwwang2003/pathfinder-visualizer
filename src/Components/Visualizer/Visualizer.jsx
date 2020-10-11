@@ -164,19 +164,18 @@ class Visualizer extends Component {
   handleVisualize() {
     this.resetGrid();
     const {grid} = this.state;
-    console.log(grid);
     const startNode = grid[this.state.startRow][this.state.startCol];
     const finishNode = grid[this.state.endRow][this.state.endCol];
-    let visitedNodesInOrder = null;
-    let nodesInShortestPathOrder = null;
-    console.log(this.state.algo);
+    let visitedNodesInOrder = [];
+    let nodesInShortestPathOrder = [];
     if (this.state.algo === `A*`) {
       visitedNodesInOrder = astar(grid, startNode, finishNode);
       nodesInShortestPathOrder = astarPath(finishNode);
     }
     else if (this.state.algo === `Dijkstra’s`) {
-      visitedNodesInOrder = dijkstra(grid, startNode, finishNode);
-      nodesInShortestPathOrder = dijkstraPath(finishNode);
+      const results = dijkstra(grid, startNode, finishNode);
+      if (results[1]) nodesInShortestPathOrder = dijkstraPath(finishNode);
+      visitedNodesInOrder = results[0];
     }
     else if (this.state.algo === `BFS`) {
       visitedNodesInOrder = bfs(grid, startNode, finishNode);

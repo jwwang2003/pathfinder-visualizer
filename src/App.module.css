@@ -6,6 +6,23 @@
   grid-template-rows: 63px auto;
 }
 
+.important {
+  display: none;
+}
+
+@media only screen and (max-width: 900px) {
+  .App {
+    display: none;
+  }
+  .important {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-align: center;
+  }
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -51,6 +68,12 @@
   align-items: center;
   background-color: rgb(230,230,230);
   padding: 5px;
+}
+
+.navbar > .navbar_main > h5 {
+  margin-top: auto;
+  padding: 0px;
+  color: green;
 }
 
 .navbar > .navbar_main > h1 {

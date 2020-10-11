@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
   Link
@@ -13,10 +13,15 @@ import { Visualizer } from './Components';
 function App() {
   return (
     <Router>
+      <div className={styles.important}>
+        <div>
+        <h1>Please resize window! (Minimum width 900px)</h1>
+        </div>
+      </div>
       <div className={styles.App}>
         <div className={styles.navbar}>
           <div className={styles.navbar_main}>
-            <h1>Algorithm Visualizer</h1>
+            <h1>Algorithm Visualizer</h1><h5>2020.10.10</h5>
           </div>
           <div className={styles.navbar_items}>
             <Link to="/" className="nav-link"><h5>Home</h5></Link>
