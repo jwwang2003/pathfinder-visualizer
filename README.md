@@ -1,68 +1,63 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Pathfinder (Algorithm Visualizer)
 
-## Available Scripts
+Have you ever wondered how it looks like when an algorithm such as Dijkstra's or BFS traverses a grid? Well here is a visual simulation of it! This project was built in two days using React in VS Code using `npm create-react-app`.  Credits to Brian Xue for helping me test and debug.
 
-In the project directory, you can run:
+Last update: October 10, 2020
 
-### `npm start`
+Any feedback or bug reports please contact jwwang.2003@gmail.com
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## How to use
+[Click here](https://jwwang2003.github.io/pathfinder-visualizer/) to try it in your browser, a minimum resolution of 900px width is required otherwise webpage won't show. Which means this won't work on mobile devices in portrait mode. (I will fix this later)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+The UI is very simple to use!
+**Drawing Walls** (the most interesting part of this project) simply click, drag (optional), and release on the big white space to activate a wall. Clicking or dragging over walls already activated would revert them into empty spaces.
+**Visualize button** basically begins the simulation; when it is pressed, the nodes would start to change state on the grid and you won't be able to draw any walls or change any settings.
+**Reset button** Clears everything on the grid except the walls
+**Clear button** Clears everything including walls
 
-### `npm test`
+**Want to download and experiment with it?**
+ 1. Clone this repo and open the directory in VS  Code
+ 2. Open the terminal `npm install`, this would install all the required dependencies
+ 3. `npm start` hosts it locally on your machine
+ 4. `npm build` compiles code into html (for production & hosting)
+ 5. `npm deploy` pushes the built website to your github pages 
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+> **WARNING** the homepage is currently set to my own
 
-### `npm run build`
+These instructions may be a bit vague, please follow official tutorials on how to use these features.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## What works
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+ - Dijkstra's algorithm
+ - Nav & control menu
+ - Grid and animations
+ - Drawing walls
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## What doesn' t work
 
-### `npm run eject`
+ - Other algorithms (because I have not written the code for them yet)
+ - Learn & about pages are empty
+ - Possibility of bugs?
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## To-do (Future plans)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2020.10.10 - Currently working on another project and have school work. Once I have time I will come back and finish these ;)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+ - Mobile friendly
+ - Add some graphics (instead of just colors to represent node states)
+ - Make start and end nodes movable
+ - Learn page, here I'll post my code for each algorithm and a brief explanation of how it works
+ - Possibly add tree graph mode (I think it's going to be a challenge)
+ - Wall or maze generator
+ - MORE TYPE OF GRAPH AND ALGORITHMS
+ - Any suggestions?
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Changelog
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+ - ## October 10, 2020
+	 - Initial build and upload yay!
+	 - Discovered two major bugs (fixed)
+		 - After the first visualization, adding an extra walls shows on the grid but algorithm passes right through it
+			 - It appears in my reset function for each node did not reset the distance value therefore the algorithm did not work properly causing this bug
+		 - After the first visualization (with solution), if the next visualization has no solution, the shortest path from the previous successful visualization would be drawn overwriting any wall in its way
+			 - Adding another check in the algorithm to see if there was an solution solved this issue. If these were no solution then it returns a empty array.
