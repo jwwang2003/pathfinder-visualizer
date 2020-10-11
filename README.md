@@ -1,10 +1,10 @@
 # Pathfinder (Algorithm Visualizer)
 
-Have you ever wondered how it looks like when an algorithm such as Dijkstra's or BFS traverses a grid? Well here is a visual simulation of it! This project was built in two days using React in VS Code using `npm create-react-app`.  Credits to Brian Xue for helping me test and debug.
+Have you ever wondered how it looks like when an algorithm such as Dijkstra's or BFS traverses a grid? Well here is a visual simulation of it! This project was built in two days using React in VS Code with `npm create-react-app`.  Credits to Brian Xue for helping me test and debug.
 
 Last update: October 10, 2020
 
-Any feedback or bug reports please contact jwwang.2003@gmail.com
+Any feedback or bug reports please email jwwang.2003@gmail.com
 
 ## How to use
 [Click here](https://jwwang2003.github.io/pathfinder-visualizer/) to try it in your browser, a minimum resolution of 900px width is required otherwise webpage won't show. Which means this won't work on mobile devices in portrait mode. (I will fix this later)
